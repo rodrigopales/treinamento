@@ -1,169 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
-      defer
-    ></script>
-    
-    <title>Povão</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Treinamento Tailwindcss</title>
 </head>
-<body>
+<body class="bg-gray-200">
 
-    <header class="bg-red-500 p-4 flex">
-       
-       
+  <header class="bg-black text-center">
+    <h1 class="font-black text-3xl p-4 align-middle items-center text-white">Treinamento Tailwindcss</h1>
+  </header>
+
+  
+    <div class="flex-wrap md:flex  p-4">  
       
-
       
-      <nav
-        class=" flex flex-wrap justify-between  p-2  w-full z-10 top-0"
-        x-data="{ isOpen: false }"
-        @keydown.escape="isOpen = false"
-        :class="{ 'shadow-lg bg-red-500' : isOpen , 'bg-red-500' : !isOpen}"
-      >
-
-       <!--Logo etc-->
-       <div class=" text-white order-2 " >
-        <a
-          class="text-white no-underline hover:text-white hover:no-underline"
-          href="index.html"
-        >
-          <img src="images/Logo povão.png" alt="Logo - Povão">
+      <div class="shadow-2xl hover:bg-gray-500 rounded-lg cursor-pointer m-2 md:m-2 mx-auto  w-2/3 md:w-3/12 h-20 p-4 bg-red-500 text-center">
+        <a class=" align-middle  font-bold text-2xl" href="noticiag1.html">Noticia G1
+          <i class="justify-end align-middle mx-auto ml-2 text-xs text-white">Clone G1 Março 2021</i>
         </a>
       </div>
+
+      
+
+
+
+      
      
-        <!--Toggle button (hidden on large screens)-->
-        <button
-          @click="isOpen = !isOpen"
-          type="button"
-          class="block order-3  lg:hidden px-2 text-white hover:text-white focus:outline-none focus:text-white"
-          :class="{ 'transition transform-180': isOpen }"
-        >
-          <svg
-            class="h-8 w-8 md:h-16 md:w-16 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path
-              x-show="isOpen"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-            />
-            <path
-              x-show="!isOpen"
-              fill-rule="evenodd"
-              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-            />
-          </svg>
-        </button>
+
+    </div>
+
   
-        <!--Menu-->
-        <div
-          class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
-          :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
-          @click.away="isOpen = false"
-          x-show.transition="true"
-        >
-          <ul
-            class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
-          >
-            <li class="mr-3">
-              <a
-                class="inline-block py-2 px-4 text-white no-underline"
-                href="noticiag1.html"
-                @click="isOpen = false"
-                >Clone Noticia G1
-              </a>
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-yellow-300 hover:text-underline py-2 px-4"
-                href="#"
-                @click="isOpen = false"
-                >Planos
-              </a>
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-yellow-300 hover:text-underline py-2 px-4"
-                href="#"
-                @click="isOpen = false"
-                >Contato
-              </a>
-            </li>
-            <li class="mr-3">
-              <a
-                class="inline-block text-white no-underline hover:text-yellow-300 hover:text-underline py-2 px-4"
-                href="#"
-                @click="isOpen = false"
-                >Área do cliente
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
-        
-
-
-    </header>
-
-   
-
-   
-
-    <main class="bg-white ">
-
-        <div class="text-center">
-        
-        <p class="p-6 font-bold text-xl">
-            Criado para escutar a voz do povo , avalie a comida de sua empresa.
-        </p>
-
-      
-        <a href="saibamais.html">
-        <button class="rounded-xl mt-5 p-3 bg-yellow-300 font-bold text-white  border-2 border-black">
-            Saiba mais
-        </button>
-        </a>
-        
-        </div>
-        
-       <div class=" flex flex-wrap justify-end  bg-green-400 p-4 m-2 rounded-xl border-4 border-gray-900">
-          <div class=" border-2 mx-auto  border-gray-800 p-2  ">1</div>
-          <div class="border-2  border-gray-800 p-2 ">2</div>
-          
-      
-
-       </div>
-   
-
-    </main>
-
-
-    <footer class="bg-red-500 md:h-full flex justify-around h-auto p-4
-    ">
-        <div class="colunm-3 m-4">
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-      </div>
-
-      <div class="colunm-3 m-4">
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-        <p>Teste</p>
-      </div>
-
-    </footer>
     
+
+    
+
+
+    
+
+
+
+
+   
+
+    
+  </nav>
+  
 </body>
 </html>
